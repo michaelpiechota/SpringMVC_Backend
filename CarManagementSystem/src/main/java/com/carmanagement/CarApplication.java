@@ -1,6 +1,6 @@
 package com.carmanagement;
 
-//import com.sun.deploy.net.HttpResponse;
+import com.sun.deploy.net.HttpResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
@@ -48,7 +48,6 @@ public class CarApplication extends WebSecurityConfigurerAdapter {
 
 		SpringApplication.run(CarApplication.class, args);
 	}
-
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
 		http.antMatcher("/**")
@@ -61,7 +60,6 @@ public class CarApplication extends WebSecurityConfigurerAdapter {
 				.and().csrf()
 				.csrfTokenRepository(CookieCsrfTokenRepository.withHttpOnlyFalse());
 	}
-
 	private Filter ssoFilter() {
 		CompositeFilter filter = new CompositeFilter();
 		UserInfoTokenServices tokenServices = null;
@@ -85,7 +83,6 @@ public class CarApplication extends WebSecurityConfigurerAdapter {
 		registration.setOrder(-100);
 		return registration;
 	}
-
 	@Bean
 	@ConfigurationProperties("google.client")
 	public AuthorizationCodeResourceDetails google() {

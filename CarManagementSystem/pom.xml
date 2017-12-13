@@ -79,14 +79,7 @@
             <artifactId>json</artifactId>
             <version>20151123</version>
         </dependency>
-		<!--FOR AWS HOSTED TOMCAT -->
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-tomcat</artifactId>
-			<scope>provided</scope>
-		</dependency>
     </dependencies>
-
 
 	<build>
 		<plugins>

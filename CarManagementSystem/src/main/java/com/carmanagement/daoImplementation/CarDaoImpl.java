@@ -35,7 +35,6 @@ public class CarDaoImpl implements CarDao {
         }
         return flag;
     }
-
     @SuppressWarnings("unchecked")
     @Override
     @Transactional
@@ -62,7 +61,6 @@ public class CarDaoImpl implements CarDao {
         }
         return ratingAllList;
     }
-
     @Override
     public boolean upadateCarRating(int id,int rating){
         boolean status = false;

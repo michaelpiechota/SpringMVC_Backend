@@ -24,13 +24,13 @@ public class RequestController {
 
     @Autowired
     private CarService carService;
-
     @GetMapping(value = "/saveCar/{make}/{model}/{year}",consumes = "application/json")
     public ResponseEntity<?> addCar(@PathVariable String make,@PathVariable String model,@PathVariable String year){
         ResponseEntity<?> responseEntity = null;
         String status = "";
         boolean flag = false;
-        try{CarBean carObject = new CarBean();
+        try{
+            CarBean carObject = new CarBean();
             carObject.setMake(make);
             carObject.setModel(model);
             carObject.setYear(Integer.parseInt(year));
@@ -51,7 +51,6 @@ public class RequestController {
         }
         return status;
     }
-
     @GetMapping("/getRatings/{id}")
     public @ResponseBody String getRatingToCar(@PathVariable String id){
         String status = "";
@@ -66,7 +65,6 @@ public class RequestController {
         }
         return jsArray.toString();
     }
-
     @GetMapping(value = "/getAllCars/",produces = "application/json")
     public @ResponseBody String getAllCars(){
         List<CarBean> carList = null;
