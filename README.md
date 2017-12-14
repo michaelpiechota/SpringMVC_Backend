@@ -2,7 +2,7 @@ This is a SPRING MVC & Angular2 car management application made for my Object Or
 
 *NOTE:* All components of project were hosted locally.
 
-
+Please see screenshots for program visuals.
 
 
 ------------
